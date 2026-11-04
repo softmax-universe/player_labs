@@ -125,7 +125,7 @@ The `uri` is the path **inside** the container (relative to the `-v` mount).
 
 ## B. The replay as events: `expand_replay` (objective ground truth)
 
-`tools/expand_replay` in the Crewrift repo (`Metta-AI/coworld-crewrift`)
+`tools/expand_replay` in the Crewrift repo (`softmax-universe/coworld-crewrift`)
 parses a `.bitreplay` into a tick-by-tick **text event timeline**. Because it reads
 the recorded game, it knows the **true roles** — kills are attributed to the real
 imposters — so it is the fastest objective view of what actually happened. (The
