@@ -12,7 +12,7 @@ deliberately **not** about the wire protocol or implementation.
 - For **reading a finished game** (replays/logs), see [`crewrift-replays.md`](crewrift-replays.md).
 
 > **Sourcing & validity.** Rules and parameters here are taken from the game source
-> (`Metta-AI/coworld-crewrift`: `src/crewrift/sim.nim`, `README.md`) and the
+> (`softmax-universe/coworld-crewrift`: `src/crewrift/sim.nim`, `README.md`) and the
 > `notsus` reference bot's strategy notes, **validated against crewrift `d9f6b30`
 > (v0.1.40)**. Concrete numbers are *current* values and **version-dependent** — a
 > game bump can change them; re-check `sim.nim` if precision matters. **Rules**
@@ -61,7 +61,7 @@ The two sides have fundamentally different goals, action sets, and information �
 By default roles are assigned randomly each episode. To **fix** who is crew vs. imposter
 (e.g. to measure your policy purely as an imposter), an experience request sets
 `game_config_overrides.slots` — the authoritative shape, straight from the game's config
-schema (`Metta-AI/coworld-crewrift`: `coworld_manifest.json` → `config_schema.slots`):
+schema (`softmax-universe/coworld-crewrift`: `coworld_manifest.json` → `config_schema.slots`):
 
 - `slots` is an **array of objects**, one per slot — **not** an array of role strings.
 - Each object: `{"role": "crew"|"imposter", "color"?: <one of the 16 colors above>, "token"?: <str>}`.
@@ -351,6 +351,6 @@ Current values (`sim.nim` @ crewrift `d9f6b30`, 24 ticks/s; **version-dependent*
 - [`designs/building_players.md`](designs/building_players.md) — building a player image.
 - [`crewrift-replays.md`](crewrift-replays.md) — reading a finished game's replay/logs.
 - `crewrift/notsus/README.md` (vendored) — the reference bot's extensive strategy notes.
-- Authoritative game source: `Metta-AI/coworld-crewrift`: `src/crewrift/sim.nim`
+- Authoritative game source: `softmax-universe/coworld-crewrift`: `src/crewrift/sim.nim`
   and the game `README.md` (rules, scoring). Re-check these if anything here is stale.
 </content>
